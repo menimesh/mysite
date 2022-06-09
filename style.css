@@ -1,0 +1,286 @@
+/* Importing custom font */
+@import url("https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700|Roboto:300,400,500,700,900&amp;display=swap");
+/* Creating CSS variable so it can be used */
+:root {
+  --primary-color: #6f95f8;
+  --primary-dark-color: #2f51a8;
+}
+/* Applies this font  inside body */
+body {
+  font-family: "Poppins", sans-serif;
+}
+/* Default margin top, bottom changed */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a {
+  margin-bottom: 0;
+  margin-top: 0;
+  color: #222222;
+}
+
+/* inherit box sizing property in all   */
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+/* border box in html */
+* {
+  background-color: aqua;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+/* list style type changed to none */
+li {
+  list-style: none;
+}
+/* container class image width, margin and padding bottom changed */
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding-bottom: 60px;
+}
+/* nav bar location position stick */
+nav {
+  position: sticky;
+  padding: 10px 0;
+  z-index: 9999;
+  top: 0;
+  transition: all 200ms ease-in-out;
+  color: black;
+}
+/* apply nav bar background color and text color while scrolling  */
+.nav-color {
+  background-color: var(--primary-dark-color);
+  color: white;
+}
+/* apply width, margin, justify content, flex property, padding and aligin to center in nav wrapper class */
+.nav-wrapper {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  padding: 10px 0;
+  justify-content: space-between;
+  align-items: center;
+}
+/* text decoration to none inside nav wrapper class and anchor tag */
+.nav-wrapper a {
+  text-decoration: none;
+}
+/* flex property of nav right class inside nav wrapper */
+.nav-wrapper .nav-right {
+  display: flex;
+}
+/* inside nav wrapper> nav right class> list> margin applied except first child */
+.nav-wrapper .nav-right li:not(:first-child) {
+  margin-left: 10px;
+}
+/* applying css styles inside nav item class */
+.nav-item {
+  padding: 4px 8px;
+  border-radius: 4px;
+  background-color: transparent;
+  transition: all 100ms ease-in-out;
+  font-weight: 600;
+  color: inherit;
+  border: 1px solid transparent;
+  outline: none;
+}
+/* CSS variable is defined and when nav item class element is in hover, then background color and text color is changed */
+.nav-item:hover {
+  background-color: var(--primary-color);
+  color: white;
+}
+/* when nav item class is in active background color and border of the element is changed  */
+.nav-item:active {
+  background-color: var(--primary-dark-color);
+  border: 1px solid white;
+}
+/* applying css styles in id home and calc function is used to perform calculation in viewport height, justified content to space between, flex property is used */
+#home {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: calc(100vh - 60px);
+  width: 100%;
+}
+/* applying flex property to class home left of id home */
+#home .home-left {
+  flex: 1;
+}
+/* applying flex property to class home right of id home and flex direction to row reverse */
+#home .home-right {
+  display: flex;
+  flex-direction: row-reverse;
+  flex: 1;
+}
+/* applying css styles margin bottom,font size is in rem and 1 rem = 16px, font weight, line height to h1 element of class home left of id home */
+#home .home-left h1 {
+  margin-bottom: 3.5rem;
+  font-size: 4.5rem;
+  font-weight: 300;
+  line-height: 1.2;
+}
+/* font size and font weight of p element of class home left of id home */
+#home .home-left p {
+  font-size: 1.25rem;
+  font-weight: 300;
+}
+/* customizing img tag of class home right of id home by making image fit in cover */
+#home .home-right img {
+  height: 30%;
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  margin-right: -20px;
+}
+/* apply positioned relative to its normal position, height, and top margin to class section header*/
+.section-header {
+  position: relative;
+  height: 120px;
+  margin-top: 60px;
+}
+/*customize class section header> class section title rgba>-red green blue opacity. opacity means to make transparent or opaque.
+position absolute is it is position relative to its first positioned of parent class not static */
+.section-header .section-title {
+  font-size: 6rem;
+  color: rgba(0, 0, 0, 0.08);
+  text-transform: uppercase;
+  position: absolute;
+  top: -5px;
+  left: 10px;
+}
+/* customize class section header> class section subtitle */
+.section-header .section-subtitle {
+  font-size: 3.5rem;
+  font-weight: 300;
+  line-height: 1.2;
+  position: absolute;
+}
+/* customize id about me> class about wrapper */
+#about-me .about-wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+/* applying styles to class about left and about right flex property */
+.about-left,
+.about-right {
+  flex: 1;
+}
+/* apply margin left to about right class */
+.about-right {
+  margin-left: 30px;
+}
+/* apply styles to h1 tag whose class is title */
+h1.title {
+  font-size: 2.4rem;
+}
+/* apply styles to h2 tag whose class is title */
+h2.title {
+  font-size: 2.2rem;
+}
+/* apply styles to h3 tag whose class is title */
+h3.title {
+  font-size: 2rem;
+}
+/* apply styles to h4 tag whose class is title */
+h4.title {
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 1.2;
+}
+/* apply styles to h5 tag whose class is title */
+h5.title {
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1.2;
+}
+/* apply styles to h6 tag whose class is title */
+h6.title {
+  font-size: 1.15rem;
+  font-weight: 500;
+  line-height: 1.2;
+}
+/* apply margin top to class education wrapper> class subtitle */
+.education-wrapper .subtitle {
+  margin-top: 10px;
+}
+/* apply styles to p tag whose class is subtitle */
+p.subtitle {
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
+/* apply styles to span tag whose class is caption */
+span.caption {
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5;
+}
+/* apply styles to h3 tag whose class is title of id about me */
+#about-me h3.title {
+  margin-bottom: 30px;
+}
+/* apply styles to p tag of id about me */
+#about-me p {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
+/* apply styles to class progress wrapper> class progress */
+.progress-wrapper .progress {
+  margin: 10px 0;
+  width: 100%;
+  height: 20px;
+  background-color: rgba(0, 0, 0, 0.08);
+  border-radius: 4px;
+  display: flex;
+}
+/* apply styles to class progress wrapper> class progress> class progress val */
+.progress-wrapper .progress .progress-val {
+  background-color: var(--primary-dark-color);
+  border-radius: 4px;
+}
+/* apply styles to class about left> class contact links */
+.about-left .contact-links {
+  margin-top: 26px;
+}
+/* apply styles to class contact links */
+.contact-links {
+  display: flex;
+}
+/* apply styles to class contact links> class contact link except last child */
+.contact-links .contact-link:not(:last-child) {
+  margin-right: 20px;
+}
+/* animation on contact icon hover with scale effect, scale means how much to zoom */
+.contact-link:hover {
+  transform: scale(1.1);
+}
+.contact-link:hover i {
+  transform: scale(1.4);
+}
+.contact-link {
+  transition: all 200ms ease;
+}
+.contact-link i {
+  transition: all 400ms ease;
+}
+/* apply styles to i tag of class contact link */
+.contact-link i {
+  font-size: 32px;
+  color: var(--primary-dark-color);
+}
+
+/*Education section */
+.education-wrapper{
+ 
+    margin-top: 15px;
+  }
